@@ -5,16 +5,16 @@ import TodoFeature from "./features/Todo/pages/index";
 import "./App.css";
 import productApi from "./api/productApi";
 function App() {
-	// useEffect(() => {
-	// 	const fetchProducts = async () => {
-	// 		const params = {
-	// 			_limit: 10,
-	// 		};
-	// 		const productList = await productApi.getAll(params);
-	// 		console.log(productList);
-	// 	};
-	// 	fetchProducts();
-	// }, []);
+	useEffect(() => {
+		const fetchProducts = async () => {
+			const params = {
+				_limit: 10,
+			};
+			const productList = await productApi.getAll(params);
+			console.log(productList);
+		};
+		fetchProducts();
+	}, []);
 	return (
 		<div className="App">
 			homepage
